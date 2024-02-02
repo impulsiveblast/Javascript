@@ -1,0 +1,38 @@
+//defining a string
+"hi user"
+'hi user'
+"you're welcome to the world of javascript"  //double quotes help it to distinguish between single and double quotes
+"you're welcome to the world of javascript"
+`js starts from here`
+'js starts from here'
+`js starts from here //due to presence of ` we can write our string in 2 lines
+and ends here`
+'js starts from here\nand ends here'  //the output shows the separation of both of these lines with a \n 
+
+'₹'+((15599-(10/100*15599))+2499-(41/100*2499)-29-272+25+20)
+'₹15257.509999999998'
+
+'₹+${(15599-(10/100)*15599+2499-(41/100)*2499-29-272+25+20)*118/100)}'
+'₹+${(15599-(10/100)*15599+2499-(41/100)*2499-29-272+25+20)*118/100)}'
+
+//concatenation
+'hi'+'golu'
+'higolu'
+'hi'+' golu'
+'hi golu'
+'you have  got '+3+4+'marks'
+'you have  got 34marks'
+'you have  got '+(3+4)+' marks'
+'you have  got 7 marks'
+
+//typeof   :tells us about the data type of the variable
+typeof 1234
+'number'
+typeof 'hello'
+'string'
+typeof (123+22)
+'number'
+typeof (11==11)
+'boolean'
+
+
