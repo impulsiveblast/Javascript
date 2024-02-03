@@ -1,0 +1,17 @@
+<head>
+<title>title of web page</title>
+<style> //css properties are defined under style
+#first{   //an id named first has got created with following properties
+  color:red;
+}
+.second{  //a class with name second has got created
+  color:blue;
+}
+</style>
+</head>
+<body>
+<div id="first">text follows properties of first id</div>
+<div class="second>text follows properties of second id</div> 
+<div class="second>another text follows properties of second id</div> 
+</body>
+
