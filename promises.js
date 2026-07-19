@@ -58,5 +58,23 @@ ans3.then((message)=>{
    console.log("The error message of the program is :"+ error);
 }).then((message)=>{
   console.log("Second message is: "+message);
+}).finally((message)=>{
+  console.log("I will run in every condition")})
+
+
+  let promise1=new Promise((resp,rej)=>{
+   setTimeout(resp,2000,"1st pass")
 })
+
+  let promise2=new Promise((resp,rej)=>{
+    setTimeout(resp,2000,"2nd pass")
+})
+
+  let promise3=new Promise((resp,rej)=>{
+    setTimeout(resp,3000,"3rd pass")
+  })
+
+  Promise.all([promise1,promise2,promise3]).then((msg)=>{
+    console.log(msg);
+  })
 
