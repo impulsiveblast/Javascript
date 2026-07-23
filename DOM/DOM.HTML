@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+
+    <style>
+
+        .hero{
+          color: blue;
+          align-content: center;
+        }
+      
+        body{
+            font-family: Arial;
+            margin:40px;
+        }
+
+        .box{
+            border:1px solid gray;
+            padding:20px;
+            margin-bottom:20px;
+        }
+
+        .bada{
+            color:red;
+            font-size: 50px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .green{
+            color:green;
+        }
+
+        .hidden{
+            display:none;
+        }
+
+        button{
+            margin:5px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<h1 id="heading">DOM Practice Sheet</h1>
+
+<p class="description">
+    Learn DOM by changing this page.
+</p>
+
+<div class="box">
+
+    <h2 class="bada">Section 1</h2>
+
+    <p class="text">
+        Paragraph One
+    </p>
+
+    <p class="text">
+        Paragraph Two
+    </p>
+
+</div>
+
+<div class="box">
+
+    <input
+        type="text"
+        id="username"
+        placeholder="Enter Name">
+
+    <button id="btn">
+        Click Me
+    </button>
+
+</div>
+
+<div class="box">
+
+    <ul id="list">
+
+        <li>Apple</li>
+
+        <li>Mango</li>
+
+        <li>Banana</li>
+
+    </ul>
+
+</div>
+
+<div class="box" id="container">
+
+</div>
+
+<script>
+//js will be running here and DOM Will also be performed
+
+
+let tst=document.querySelector('.bada');
+
+
+tst.innerHTML='Wildlife and Nature';
+
+
+//we acessed the object of html using its class bada and modified it
+
+let mod=document.querySelector('body')
+
+mod.innerHTML='<h1 class="hero">You Have Been Hacked</h1>'
+
+</script>
+
+</body>
+</html>

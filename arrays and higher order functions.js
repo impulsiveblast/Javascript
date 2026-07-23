@@ -81,6 +81,15 @@ let arr=[2,4,3,5,8,7,12]
 
 // console.log(arr)
 
-//reduce
+//reduce : helps in reducing whole array to one element
 
- 
+//  let ans=arr.reduce((fin,curr)=>{
+//      return fin+curr;
+//  },0)
+
+//  console.log(ans);
+
+//  let ans2=arr.reduce((fin,curr)=>fin+curr,2);
+
+//  console.log(ans2);
+
