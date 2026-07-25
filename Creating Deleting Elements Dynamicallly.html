@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOM Playground</title>
+
+<style>
+
+body{
+    font-family:Arial;
+    margin:30px;
+    background:#f5f5f5;
+}
+
+.container{
+    border:2px solid gray;
+    padding:20px;
+    margin-bottom:20px;
+}
+
+.box{
+    border:1px solid black;
+    padding:10px;
+    margin:10px 0;
+}
+
+.red{
+    color:red;
+}
+
+.green{
+    color:green;
+}
+
+.hidden{
+    display:none;
+}
+
+button{
+    margin:5px;
+    padding:8px 14px;
+}
+
+</style>
+
+</head>
+<body>
+
+<h1 id="title">DOM Practice Playground</h1>
+
+<div class="container" id="container">
+
+    <h2 class="heading">Heading One</h2>
+
+    <p id="para1">Paragraph One</p>
+
+    <p class="text">Paragraph Two</p>
+
+    <p class="text">Paragraph Three</p>
+
+    <div class="box" id="box1">
+        Box 1
+    </div>
+
+    <div class="box" id="box2">
+        Box 2
+    </div>
+
+    <ul id="list">
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ul>
+
+</div>
+
+<button id="btn">Click Me</button>
+
+<script>
+
+let elem=document.createElement("button");
+
+elem.textContent="NOTA"
+elem.className="btn2";
+var k=0;
+
+   
+let elem3=document.querySelector("h1");
+  
+    elem3.appendChild(elem);
+
+    elem.addEventListener('click',()=>{
+    let elem2=document.querySelectorAll("li");
+    k+=1;
+  
+    if(k%2==0)
+   {
+     elem2[0].textContent="Banana"
+   } 
+   else
+   {
+    elem2[0].textContent="Strawberry"
+   }
+    })
+
+
+
+   let ele4=document.querySelector("#btn")
+
+   ele4.textContent="Click"
+  
+   var m=0;
+
+        let el2=document.querySelector("#list");
+
+   ele4.addEventListener('click',()=>{
+        m++;
+
+        let el=document.createElement("li");
+        
+          
+         el.innerText=`${m} Elements added`
+
+         el2.appendChild(el);
+         
+
+        if(m%2==1)
+        {
+            ele4.textContent="Unclick";
+            ele4.style.color="red";
+        }
+        else
+        {
+            ele4.textContent="Click"
+            ele4.style.color="green";
+        }
+   })
+
+
+
+</script>
+
+</body>
+</html>

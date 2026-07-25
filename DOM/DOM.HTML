@@ -45,7 +45,6 @@
 
 </head>
 <body>
-
 <h1 id="heading">DOM Practice Sheet</h1>
 
 <p class="description">
@@ -55,7 +54,7 @@
 <div class="box">
 
     <h2 class="bada">Section 1</h2>
-
+   <h2 class ="bada">Toggle</h2>
     <p class="text">
         Paragraph One
     </p>
@@ -73,10 +72,13 @@
         id="username"
         placeholder="Enter Name">
 
-    <button id="btn">
+    <button id="btn" onclick="func2()">
         Click Me
     </button>
-
+  <p></p>
+  <button id="clickable" >Submit</button>
+  <p></p>
+  <button id="click2" >NOTA Button</button>
 </div>
 
 <div class="box">
@@ -88,7 +90,7 @@
         <li>Mango</li>
 
         <li>Banana</li>
-
+<pre><code>Console.log("hi there im using watsaap")</code></pre>
     </ul>
 
 </div>
@@ -101,17 +103,76 @@
 //js will be running here and DOM Will also be performed
 
 
-let tst=document.querySelector('.bada');
+// let tst=document.querySelector('.bada');
 
 
-tst.innerHTML='Wildlife and Nature';
+// tst.innerHTML='Wildlife and Nature';
 
 
 //we acessed the object of html using its class bada and modified it
 
-let mod=document.querySelector('body')
+// let mod=document.querySelector('body')
 
-mod.innerHTML='<h1 class="hero">You Have Been Hacked</h1>'
+// mod.innerHTML='<h1 class="hero">You Have Been Hacked</h1>'
+// let ans=document.querySelector('div');
+
+// ans.innerHTML='You are terminated';
+let ans2=document.querySelector('code')
+
+// ans2.innerHTML='Alert bharat me brainless revolution suru ho chuka hai'
+
+// let ans3=document.querySelectorAll('div')
+
+// ans3.forEach((val) => {
+//     val.innerHTML='you are a peice of failure'
+// });
+
+var func=()=>{
+        console.log('Thanks for clicking')
+        }
+
+        var func2=()=>{
+            console.log("User ust clicked me")
+            alert('Hi an alert has been released')
+        }
+
+
+let ans4=document.getElementById("heading");
+
+ans4.classList.add("hero","box");
+
+// var bu=document.querySelector("#clickable")
+var bu=document.getElementById("clickable")
+
+// bu.onclick=()=>{
+//    console.log("Acessed using query selector then applied onclick");
+//    alert('We are under script tag')
+// }
+
+//most preferred way of adding event listner
+
+donothin=()=>{
+    console.log("Unemployed")
+}
+
+
+bu.addEventListener('click',donothin())
+
+var but=document.querySelector("#click2")
+var but2=document.querySelector(".bada");
+
+but.addEventListener('click',()=>{
+
+    if(but2.style.color=="red")
+   {
+    but2.style.color="blue"
+  }
+  else
+  {
+    but2.style.color="red"
+  }
+}
+)
 
 </script>
 
