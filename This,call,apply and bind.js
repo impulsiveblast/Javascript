@@ -8,6 +8,47 @@ function greet()
   console.log(`Hi ${this.Name}`)
 }
 
+
+
+const stopwatch={
+    time:0,
+    
+    
+    start:function ()
+    {
+        var that=this;   //points to this of current object 
+        
+        const fn=()=>{
+            
+            setInterval(()=>{
+            that.time++;     //this this is pointing to the current object its not arrow function's this hence it contains time value which is being increased here
+            
+            console.log(that.time);
+        },1000)
+        
+            
+        }
+        
+        fn();
+    }
+    
+    
+}
+
+//clock
+    const run=()=>{
+        setInterval(()=>{
+            const ans=new Date();
+            const hr=ans.getHours();
+            const min=ans.getMinutes();
+            const sec=ans.getSeconds();
+        console.log(`${hr}:${min}:${sec}`);
+    },1000)
+    }
+    
+    run()
+
+stopwatch.start()
 //to increase age of user
 
 function inc(val){
