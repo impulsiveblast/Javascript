@@ -1,0 +1,29 @@
+const User = require("../models/user");
+const { v4: uuidv4 } = require("uuid");
+
+async function handleUserLogin(req, res) {
+  const { email, password } = req.body;
+
+  const user = await User.findOne({
+    email: email,
+    password: password
+  });
+
+  if (!user) {
+    return res.status(401).send("Invalid email or password");
+  }
+
+  const sessionId = uuidv4();
+
+  await User.findByIdAndUpdate(user._id, {
+    sessionId: sessionId
+  });
+
+  res.cookie("sessionId", sessionId);
+
+  return res.redirect("/");
+}
+
+module.exports = {
+  handleUserLogin,
+};
